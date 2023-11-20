@@ -6,7 +6,9 @@ const ulEl = document.getElementById("ul-el")
 // 1. Save a key-value pair in localStorage
 // 2. Refresh the page. Get the value and log it to the console
 // 3. Clear localStorage
-
+localStorage.setItem('myLeads', 'www.example.com');
+console.log(localStorage.getItem('myLeads'));
+localStorage.clear();
 // HINTS:
 // localStorage.setItem(key, value)
 // localStorage.getItem(key)
@@ -14,7 +16,7 @@ const ulEl = document.getElementById("ul-el")
 // PS: both key and value need to be strings
 
 
-inputBtn.addEventListener("click", function() {
+inputBtn.addEventListener("click", function () {
     myLeads.push(inputEl.value)
     inputEl.value = ""
     renderLeads()
@@ -31,5 +33,5 @@ function renderLeads() {
             </li>
         `
     }
-    ulEl.innerHTML = listItems  
+    ulEl.innerHTML = listItems
 }
